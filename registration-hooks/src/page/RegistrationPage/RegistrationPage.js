@@ -1,6 +1,8 @@
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState } from "react";
+import { Link } from 'react-router-dom'
+
 function RegistrationPage() {
     const [inp, setInp] = useState({
         email: '',
@@ -39,7 +41,8 @@ function RegistrationPage() {
                 <TextField onChange={collectionInfo} name='confirmpassword' id="outlined-basic" label="ConfirmPassword" variant="outlined" value={inp.confirmpassword} />
             </div>
 
-            <Button onClick={doClick} variant="outlined">Login</Button>
+            <Button onClick={doClick} variant="outlined">Sign up</Button>
+            <p>Already have an account <Link to={'/'}><Button variant="text">SIGN IN</Button></Link></p>
         </>
     );
 }
